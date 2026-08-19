@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小学校理科 用語クイズ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">小学校理科</p>
+      <h1>用語クイズ</h1>
+      <p>学年を選んで、理科の大切な言葉を確認しよう。</p>
+    </header>
+
+    <section id="start-screen" class="card">
+      <h2>学年を選ぶ</h2>
+      <div class="grade-buttons">
+        <button class="grade-btn" data-grade="3">3年</button>
+        <button class="grade-btn" data-grade="4">4年</button>
+        <button class="grade-btn" data-grade="5">5年</button>
+        <button class="grade-btn" data-grade="6">6年</button>
+        <button class="grade-btn" data-grade="all">全学年</button>
+      </div>
+      <p class="note">選んだ学年から最大10問をランダムに出題します。</p>
+    </section>
+
+    <section id="quiz-screen" class="card hidden">
+      <div class="status-row">
+        <span id="progress">1 / 10</span>
+        <span id="score">0点</span>
+      </div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <p id="grade-label" class="badge"></p>
+      <h2 id="question"></h2>
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="next-btn" class="primary hidden">次の問題へ</button>
+    </section>
+
+    <section id="result-screen" class="card hidden result">
+      <p class="eyebrow">結果</p>
+      <h2 id="result-title"></h2>
+      <p id="result-message"></p>
+      <button id="retry-btn" class="primary">もう一度挑戦</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
